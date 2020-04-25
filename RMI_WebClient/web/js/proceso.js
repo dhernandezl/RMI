@@ -64,7 +64,7 @@ document.getElementById("txt_tarjeta").addEventListener("blur", function (event)
                 type: "GET",
                 url: '/RMI_WebClient/Servlet_Validar',
                 data: {
-                    tarjeta: num_tarjeta,
+                    tarjeta: num_tar,
                     tipo_tarjeta: tarjeta
                 },
                 success: function (responseText)

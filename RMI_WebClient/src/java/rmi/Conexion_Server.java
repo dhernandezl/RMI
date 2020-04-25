@@ -37,11 +37,7 @@ public class Conexion_Server {
             String respuesta = server.validar_tarjeta(tarjeta, tipo_tarjeta);
             /**
              * Condición si la tarjeta es válida
-             */
-            /* Proceso según el resultado obtenido del servidor RMI */
-            /**
-             * Respuesta del Servlet
-             */
+             * Proceso según el resultado obtenido del servidor RMI */
             if (respuesta.equals("Correcto")) {
                 return "Tarjeta válida";
             } else {
