@@ -5,16 +5,10 @@ var tarjeta;
 document.getElementById("tarjetas").addEventListener("blur", function (event) {
     tarjeta = document.getElementById("tarjetas").value;
     document.getElementById("txt_tarjeta").value = "";
-    switch(tarjeta){
-        case "Visa":
-            document.getElementById("txt_tarjeta").maxLength = "19";
-            break;
-        case "MasterCard":
-            document.getElementById("txt_tarjeta").maxLength = "19";
-            break;
-        case "Dinners Club":
-            document.getElementById("txt_tarjeta").maxLength = "17";
-            break;
+    if (tarjeta == "Visa" || tarjeta == "MasterCard") {
+        document.getElementById("txt_tarjeta").maxLength = "19";
+    }else{
+        document.getElementById("txt_tarjeta").maxLength = "17";
     }
 });
 
@@ -37,4 +31,51 @@ document.getElementById("txt_tarjeta").addEventListener("keypress", function (ev
             document.getElementById("txt_tarjeta").value = document.getElementById("txt_tarjeta").value + "-";
         }
     }
+});
+
+document.getElementById("txt_tarjeta").addEventListener("blur", function (event) {
+    var num_tar = document.getElementById("txt_tarjeta").value;
+    if (tarjeta == "Visa" || tarjeta == "MasterCard") {
+        if (num_tar.length == 19) {
+            /**Ajax (Este método requiere la libreria de JQuery)
+             * Envia los Datos al Servlet para Validar la tarjeta*/
+            $.ajax({
+                async: true,
+                type: "GET",
+                url: '/RMI_WebClient/Servlet_Validar',
+                data: {
+                    tarjeta: num_tar,
+                    tipo_tarjeta: tarjeta
+                },
+                success: function (responseText)
+                {
+                    document.getElementById("respuesta").innerHTML = responseText;
+                }
+            });
+        }else{
+            
+        }
+    } else {
+        if (num_tar.length == 17) {
+            /**Ajax (Este método requiere la libreria de JQuery)
+             * Envia los Datos al Servlet para Validar la tarjeta*/
+            $.ajax({
+                async: true,
+                type: "GET",
+                url: '/RMI_WebClient/Servlet_Validar',
+                data: {
+                    tarjeta: num_tarjeta,
+                    tipo_tarjeta: tarjeta
+                },
+                success: function (responseText)
+                {
+                    document.getElementById("respuesta").innerHTML = responseText;
+                }
+            });
+        }else{
+            
+        }
+    }
+    
+    
 });

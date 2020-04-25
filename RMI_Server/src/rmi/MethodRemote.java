@@ -10,7 +10,11 @@ import java.rmi.RemoteException;
 /**
  *
  * @author DHL-SIS-ING
+ * Esta clase implementa los métodos abstractos
+ * de la clase TestRemote para poder programar 
+ * la función de cada método.
  */
+
 public class MethodRemote implements TestRemote{
 
     /*Método de Validación de Tarjetas*/
