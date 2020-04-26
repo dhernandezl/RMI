@@ -9,22 +9,25 @@ and open the template in the editor.
         <title>Validación de Tarjetas</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos.css" type="text/css"/>
     </head>
     <body>
-        <div>
-            <h2>Validar Tarjetas</h2>
-            <div>
-                <label>Tarjeta: </label>
-                <select id="tarjetas">
-                    <option selected>Visa</option>
-                    <option>MasterCard</option>
-                    <option>Dinners Club</option>
-                </select>
+        <div class="caja">
+            <div class="cuerpo">
+                <h2>Validar Tarjetas</h2>
+                <div>
+                    <label>Tarjeta: </label>
+                    <select id="tarjetas">
+                        <option selected>Visa</option>
+                        <option>MasterCard</option>
+                        <option>Dinners Club</option>
+                    </select>
+                </div>
+                <form style="margin-top: 10px;">
+                    <input type="text" id="txt_tarjeta" />  
+                </form>
+                <div id="respuesta"></div>
             </div>
-            <form style="margin-top: 10px;">
-                <input type="text" id="txt_tarjeta" style="width: 20%;"/>  
-            </form>
-            <div id="respuesta"></div>
         </div>
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="js/proceso.js" type="text/javascript"></script>

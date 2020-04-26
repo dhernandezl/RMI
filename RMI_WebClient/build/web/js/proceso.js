@@ -12,6 +12,9 @@ document.getElementById("tarjetas").addEventListener("blur", function (event) {
     }
 });
 
+document.getElementById("txt_tarjeta").addEventListener("select", function(event){
+    alert("si");
+});
 document.getElementById("txt_tarjeta").addEventListener("keypress", function (event) {
     var num_tar = document.getElementById("txt_tarjeta").value;
     if (tarjeta == "Visa" || tarjeta == "MasterCard") {
