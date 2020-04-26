@@ -24,7 +24,7 @@ public class MethodRemote implements TestRemote{
         String respuesta = "";
         switch (tipo) {
             /**Si el tipo de tarjeta es Visa*/
-            case "visa":
+            case "Visa":
                 /**Crea un vector de string separados por un guión medio*/
                 String[] v = tarjeta.split("-");
                 /**Proceso de Validación de Tarjetas*/
@@ -59,7 +59,7 @@ public class MethodRemote implements TestRemote{
                 }
                 break;
             /**Si el tipo de tarjeta es Mastercard*/
-            case "mastercard":
+            case "MasterCard":
                 /**Crea un vector de string separados por un guión medio*/
                 String[] v1 = tarjeta.split("-");
                 /**Proceso de Validación de Tarjetas*/
@@ -94,7 +94,7 @@ public class MethodRemote implements TestRemote{
                 }
                 break;
             /**Si el tipo de tarjeta es Dinnners Club*/
-            case "dinners_club":
+            case "Dinners Club":
                 /**Crea un vector de string separados por un guión medio*/
                 String[] v2 = tarjeta.split("-");
                 /**Proceso de Validación de Tarjetas*/

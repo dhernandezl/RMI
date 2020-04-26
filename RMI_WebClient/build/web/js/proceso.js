@@ -57,6 +57,7 @@ document.getElementById("txt_tarjeta").addEventListener("blur", function (event)
         }
     } else {
         if (num_tar.length == 17) {
+            alert(tarjeta);
             /**Ajax (Este método requiere la libreria de JQuery)
              * Envia los Datos al Servlet para Validar la tarjeta*/
             $.ajax({
@@ -73,9 +74,6 @@ document.getElementById("txt_tarjeta").addEventListener("blur", function (event)
                 }
             });
         }else{
-            
         }
     }
-    
-    
 });
