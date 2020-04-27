@@ -5,5 +5,7 @@ Projects carried out in NetBeans IDE.
 * Web Cliet RMI
 -- JavaScript (AJAX)
 -- Servlet
-<img src="./run_server.png"/>
+#
+Server Execution
+<img src="./run_server.png" alt="Server Execution"/>
 <img src="./run_client.png"/>
