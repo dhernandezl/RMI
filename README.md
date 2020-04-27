@@ -6,6 +6,6 @@ Projects carried out in NetBeans IDE.
 -- JavaScript (AJAX)
 -- Servlet
 #
-Server Execution
+<h3>Server Execution</h3>
 <img src="./run_server.png" alt="Server Execution"/>
 <img src="./run_client.png"/>
