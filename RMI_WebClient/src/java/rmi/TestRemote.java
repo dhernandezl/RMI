@@ -1,20 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package rmi;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 /**
- * @author DHL-SIS-ING
- * Clase interface que hereda de de la clase java.rmi.Remote,
- * para indicar que puede llamarse desde cualquier máquina virtual
- * Java
+ * Interface class that inherits from the java.rmi.Remote class, 
+ * to indicate that it can be called from any Java virtual machine
  */
 public interface TestRemote extends Remote{
-    //Métodos Remotos
-    String validar_tarjeta(String tarjeta, String tipo) throws RemoteException;
+    //Remote methods
+    Double Addition(String a, String b) throws RemoteException;
+    Double Substraction(String a, String b) throws RemoteException;
+    Double Multiplication(String a, String b) throws RemoteException;
+    Double Division(String a, String b) throws RemoteException;
 }

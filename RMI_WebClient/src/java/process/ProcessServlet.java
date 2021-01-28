@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Procesos;
+package process;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,13 +11,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import rmi.Conexion_Server;
+import rmi.ConnectionServer;
 
 /**
  *
  * @author DHL-SIS-ING
  */
-public class Servlet_Validar extends HttpServlet {
+public class ProcessServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,11 +33,11 @@ public class Servlet_Validar extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            String tarjeta = request.getParameter("tarjeta");
-            String tipo_tarjeta = request.getParameter("tipo_tarjeta");
-            Conexion_Server conexion_Server = new Conexion_Server();
-            String respuesta = conexion_Server.Validar_RMI(tarjeta, tipo_tarjeta);
-            out.println("<h4 style='color: red;'>"+respuesta+"</h4>");    
+            String value_a = request.getParameter("value_a");
+            String value_b = request.getParameter("value_b");
+            String operator = request.getParameter("operator");
+            ConnectionServer connectionServer = new ConnectionServer();
+            out.println(connectionServer.CalculatorProcesses(value_a, value_b, operator));
         }
     }
 
@@ -68,6 +68,7 @@ public class Servlet_Validar extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        
     }
 
     /**
